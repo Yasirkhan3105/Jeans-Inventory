@@ -40,22 +40,34 @@ public class SecurityConfig {
                 .build();
     }
 
-
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
 
         CorsConfiguration configuration = new CorsConfiguration();
 
         configuration.setAllowedOrigins(
-                List.of("http://localhost:5173")
+                List.of(
+                        "http://localhost:5173",
+                        "https://jeans-inventory-frontend.onrender.com"
+                )
         );
 
         configuration.setAllowedMethods(
-                List.of("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
+                List.of(
+                        "GET",
+                        "POST",
+                        "PUT",
+                        "PATCH",
+                        "DELETE",
+                        "OPTIONS"
+                )
         );
 
         configuration.setAllowedHeaders(
-                List.of("Authorization", "Content-Type")
+                List.of(
+                        "Authorization",
+                        "Content-Type"
+                )
         );
 
         UrlBasedCorsConfigurationSource source =
@@ -65,7 +77,6 @@ public class SecurityConfig {
 
         return source;
     }
-
 
     @Bean
     public UserDetailsService userDetailsService(
@@ -79,7 +90,6 @@ public class SecurityConfig {
 
         return new InMemoryUserDetailsManager(admin);
     }
-
 
     @Bean
     public PasswordEncoder passwordEncoder() {
