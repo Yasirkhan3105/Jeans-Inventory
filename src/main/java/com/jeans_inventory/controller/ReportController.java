@@ -1,5 +1,6 @@
 package com.jeans_inventory.controller;
 
+import com.jeans_inventory.dto.InventoryValuation;
 import com.jeans_inventory.entity.*;
 import com.jeans_inventory.service.ReportService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -41,5 +42,15 @@ public class ReportController {
     @GetMapping("/samples")
     public List<Sample> getSamples() {
         return reportService.getSamples();
+    }
+
+    @GetMapping("/normal-stock")
+    public List<NormalStock> getNormalStock() {
+        return reportService.getNormalStock();
+    }
+
+    @GetMapping("/inventory-valuation")
+    public List<InventoryValuation> getInventoryValuation() {
+        return reportService.getInventoryValuation();
     }
 }

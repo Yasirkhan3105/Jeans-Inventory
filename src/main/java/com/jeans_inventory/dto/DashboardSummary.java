@@ -1,5 +1,7 @@
 package com.jeans_inventory.dto;
 
+import java.math.BigDecimal;
+
 public record DashboardSummary(
         long totalStyles,
         long shopStock,
@@ -9,6 +11,10 @@ public record DashboardSummary(
         long shopAssortmentPieces,
         long samplePieces,
         long wastagePieces,
-        long alterPieces
+        long alterPieces,
+        java.math.BigDecimal normalStockValue,
+        java.math.BigDecimal fabricatorStockValue,
+        java.math.BigDecimal washerStockValue,
+        java.math.BigDecimal totalInventoryValue
 ) {
 }
