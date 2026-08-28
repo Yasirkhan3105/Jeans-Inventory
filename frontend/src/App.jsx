@@ -6,7 +6,7 @@ const PAGES = [
   ["styles", "Styles"],
   ["normal-stock", "Normal Stock"],
   ["assortment", "Shop Assortment"],
-  ["samples", "Samples"],
+  ["samples", "Main Stock"],
   ["partners", "Fabricators & Washers"],
   ["movement", "Move Stock"],
   ["wastage", "Wastage & Weaving"],
@@ -360,7 +360,7 @@ function Dashboard({ summary }) {
     ["At Fabricators", summary.fabricatorStock],
     ["At Washers", summary.washerStock],
     ["Shop Extras", summary.shopAssortmentPieces],
-    ["Samples", summary.samplePieces],
+    ["Main Stock", summary.samplePieces],
     ["Wastage", summary.wastagePieces],
     ["Alters", summary.alterPieces],
   ];
@@ -861,13 +861,13 @@ function SamplesPage({
             quantity: "",
           });
         },
-        "Sample stock updated."
+        "Main stock updated."
     );
   };
 
   return (
       <PageLayout
-          description="Samples are separate from normal stock and have no size tracking."
+          description="Main stock is separate from normal stock and has no size tracking."
           form={
             <form
                 onSubmit={submit}
@@ -885,7 +885,7 @@ function SamplesPage({
               />
 
               <SelectInput
-                  label="Sample location"
+                  label="Main stock location"
                   value={form.location}
                   onChange={(value) =>
                       setForm({
@@ -911,7 +911,7 @@ function SamplesPage({
               />
 
               <SubmitButton
-                  label="Add samples"
+                  label="Add main stock"
               />
             </form>
           }
@@ -1598,7 +1598,7 @@ function ReportsPage({
     "partner-stock",
     "wastage",
     "alters",
-    "samples",
+    { value: "samples", label: "Main Stock" },
     "normal-stock",
     "inventory-valuation",
   ];
