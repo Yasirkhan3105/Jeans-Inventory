@@ -93,11 +93,11 @@ function App() {
       <main className="app-shell">
         <aside className="sidebar">
           <div className="brand">
-            <span className="brand-mark">JI</span>
+            <span className="brand-mark">SI</span>
 
             <div>
-              <strong>Jeans Inventory</strong>
-              <small>Manufacturing control</small>
+              <strong>SEVAEN INTERNATIONAL</strong>
+              <small>Inventory Management</small>
             </div>
           </div>
 
@@ -280,15 +280,15 @@ function Login({ onLogin }) {
             onSubmit={submit}
         >
         <span className="brand-mark large">
-          JI
+          SI
         </span>
 
           <p className="eyebrow">
-            JEANS MANUFACTURING
+            SEVAEN INTERNATIONAL
           </p>
 
           <h1>
-            Inventory control
+            Inventory Management
           </h1>
 
           <p className="muted">
@@ -347,7 +347,7 @@ function Dashboard({ summary }) {
     return (
         <div>
           <p className="page-intro">
-            Loading dashboard...
+            Loading SEVAEN INTERNATIONAL dashboard...
           </p>
         </div>
     );
